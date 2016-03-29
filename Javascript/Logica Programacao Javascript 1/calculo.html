@@ -1,0 +1,54 @@
+<meta charset="UTF-8">
+
+<h2>Pontos modificados do campeonato</h2>
+
+<script>
+    var pulaLinha = function() {
+        document.write("<br><hr><br>");
+    }
+
+    var mostra = function(frase) {
+        document.write(frase);
+        pulaLinha();
+    };
+
+    var calculaPontos = function(vitorias, empates) {
+        return (vitorias * 3) + empates;
+
+    }
+
+    var vitoriasCDC = parseInt(prompt("Quantos jogos o CDC Futebol Clube venceu?"));
+    var empatesCDC = parseInt(prompt("Quantos jogos o CDC Futebol Clube empatou?"));
+    pontosCDC = calculaPontos(vitoriasCDC, empatesCDC);
+
+    var vitoriasLV = parseInt(prompt("Quantos jogos o Livros Velhos venceu?"));
+    var empatesLV = parseInt(prompt("Quantos jogos o Livros Velhos empatou?"));
+    pontosLV = calculaPontos(vitoriasLV, empatesLV);
+
+    if(pontosCDC > pontosLV) {
+        mostra("Nosso time está indo MELHOR que o Livros Velhos");
+    }
+    if (pontosCDC < pontosLV) {
+        mostra("Nosso time está indo PIOR que o Livros Velhos");
+    }
+    if (pontosCDC == pontosLV) {
+        mostra("Nosso time está EMPATADO com o Livros Velhos");
+    }
+
+</script>
+
+<meta charset="UTF-8">
+
+<script>
+var numeroPensado = Math.round( Math.random() * 10 );
+
+var chute = prompt("Já pensei. Qual você acha que é?");
+if(chute == numeroPensado) {
+    alert("Uau! Você acertou, pois eu pensei no " + numeroPensado);
+} else if(numeroPensado > chute) {
+    alert('Errou! O número que eu pensei era maior que ' + chute);
+} else {
+    alert('Errou! O número que eu pensei era menor que ' + chute);
+}
+</script>
+

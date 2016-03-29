@@ -1,0 +1,39 @@
+<meta charset="UTF-8" >
+
+<canvas id="tela" width="600" height="400" />
+
+
+
+
+<script>
+
+	var tela = document.getElementById("tela");//pegar pelo id do elemento
+	var c = tela.getContext("2d");
+	
+	c.fillStyle = "gray";
+	c.fillRect(0,0,600,400);
+	
+var atira = function(evento, cor){
+		var x = evento.pageX - tela.offsetLeft;
+		var y = evento.pageY - tela.offsetTop;
+		
+		if(cor){
+		c.fillStyle = cor;
+		}else{
+		c.fillStyle = "blue";
+		}
+		
+		c.beginPath();
+		c.arc(x,y,10,0,2 * 3.14);
+		c.fill();
+	};
+
+	tela.oncontextmenu = function (evento) {
+		evento.preventDefault();
+		atira(evento, "red");
+	};
+
+	tela.onclick = atira;
+
+
+</script>

@@ -1,0 +1,70 @@
+<meta charset="UTF-8" >
+<ul>
+<li><canvas id="tela" width="600" height="400" /></li>
+<li><canvas id="exercicio" width="600" height="400" /></li>
+<ul>
+
+
+
+
+<script>
+var tela = document.getElementById("tela");//pegar pelo id do elemento
+
+var c = tela.getContext("2d");
+
+//#################### ITALIA #########################
+c.fillStyle = "green";
+c.fillRect(0,0,200,400);//desenhar retangulo Posicao de Inicio X, Posicao de Inicio Y, largura X , altura Y
+
+c.fillStyle = "red";
+c.fillRect(400,0,200,400);
+//#################### ###### #########################
+
+//#################### TRIANGULO ######################
+c.fillStyle = "gray";
+c.beginPath();
+c.moveTo(300,200);
+c.lineTo(200,400);
+c.lineTo(400,400);
+c.fill();
+//#################### ###### #########################
+
+//##################### CIRCULO #######################
+c.fillStyle = "blue";
+c.beginPath();
+c.arc(300,200,50,0,2 * 3.14);
+c.fill();
+//#################### ###### #########################
+
+</script>
+
+<script>
+var exercicio = document.getElementById("exercicio");//pegar pelo id do elemento
+
+var x = exercicio.getContext("2d");
+
+//#################### ITALIA #########################
+x.fillStyle = "green";
+x.fillRect(0,0,200,400);//desenhar retangulo Posicao de Inicio X, Posicao de Inicio Y, largura X , altura Y
+
+x.fillStyle = "red";
+x.fillRect(400,0,200,400);
+//#################### ###### #########################
+
+//#################### TRIANGULO ######################
+x.fillStyle = "gray";
+x.beginPath();
+x.moveTo(300,200);
+x.lineTo(200,400);
+x.lineTo(400,400);
+x.fill();
+//#################### ###### #########################
+
+//##################### CIRCULO #######################
+x.fillStyle = "blue";
+x.beginPath();
+x.arc(300,200,50,0,2 * 3.14);
+x.fill();
+//#################### ###### #########################
+
+</script>

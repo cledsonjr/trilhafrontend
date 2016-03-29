@@ -1,0 +1,55 @@
+<meta charset="UTF-8" >
+<ul>
+<li><canvas id="tela" width="600" height="400" /></li>
+<ul>
+
+
+
+
+<script>
+
+	var tela = document.getElementById("tela");//pegar pelo id do elemento
+	var c = tela.getContext("2d");
+	
+var desenhaQuadradoVerde = function(x,y){
+
+	c.fillStyle = "green";
+	c.fillRect(x,y,50,50)
+	
+	c.fillStyle = "black";
+	c.strokeRect(x,y, 50, 50);
+	
+};
+
+var desenhaQuadradoVermelho = function(x,y){
+	
+	c.fillStyle = "red";
+	c.fillRect(x,y,50,50)
+	
+	c.fillStyle = "black";
+	c.strokeRect(x,y, 50, 50);
+	
+};
+
+var desenhaBolaAzul = function(x,y){
+
+	c.fillStyle = "blue";
+	c.beginPath();
+	c.arc(x,y,25,0,2 * 3.14);
+	c.fill();
+
+	
+};
+
+
+
+var x = 50;
+while (x < 600){
+desenhaQuadradoVerde(x,0);
+desenhaQuadradoVermelho(x,50);
+desenhaBolaAzul(x,100);
+x +=50;
+}
+
+
+</script>

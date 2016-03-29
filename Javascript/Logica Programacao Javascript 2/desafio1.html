@@ -1,0 +1,40 @@
+<meta charset="UTF-8" >
+<ul>
+<li><canvas id="colombia" width="600" height="400" /></li>
+<li><canvas id="madagascar" width="600" height="400" /></li>
+<ul>
+
+
+
+
+<script>
+var tela = document.getElementById("colombia");//pegar pelo id do elemento
+var c = tela.getContext("2d");
+
+//#################### COLOMBIA #########################
+c.fillStyle = "yellow";
+c.fillRect(0,0,400,150);//desenhar retangulo Posicao de Inicio X, Posicao de Inicio Y, largura X , altura Y
+
+c.fillStyle = "blue";
+c.fillRect(0,150,400,75);
+
+c.fillStyle = "RED";
+c.fillRect(0,225,400,75);
+//#################### ###### #########################
+
+//#################### MADAGASCAR #########################
+var madagascar = document.getElementById("madagascar");//pegar pelo id do elemento
+var x = madagascar.getContext("2d");
+
+x.fillStyle = "white";
+x.fillRect(0,0,100,300);//desenhar retangulo Posicao de Inicio X, Posicao de Inicio Y, largura X , altura Y
+x
+x.fillStyle = "red";
+x.fillRect(100,0,300,150);
+x
+x.fillStyle = "green";
+x.fillRect(100,150,300,150);
+//#################### ###### #########################
+
+
+</script>
