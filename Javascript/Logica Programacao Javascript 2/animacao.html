@@ -1,0 +1,80 @@
+<meta charset="UTF-8" >
+<ul>
+<li><canvas id="tela" width="600" height="400" /></li>
+<li><canvas id="crescer" width="600" height="400" /></li>
+<li><canvas id="img" width="600" height="400" /></li>
+
+<ul>
+
+<script>
+
+	var tela = document.getElementById("tela");//pegar pelo id do elemento
+	var c = tela.getContext("2d");
+	
+var circulo = function(x,y, raio){
+	c.fillStyle = "blue";
+	c.beginPath();
+	c.arc(x,y,raio,0,2 * Math.PI);
+	c.fill();
+};
+
+var limpaTela = function(x,y){
+	c.clearRect(0,0,600,400);
+};
+
+var x = 1;
+var desenha = function(){
+	limpaTela();
+	circulo(x,100,10);
+	x++;
+}
+
+
+setInterval(desenha, 30);
+</script>
+
+<script>
+
+	var tela = document.getElementById("crescer");//pegar pelo id do elemento
+	var crescer = tela.getContext("2d");
+	
+var circulo2 = function(x,y, raio){
+	crescer.strokeStyle  = "blue";
+	crescer.beginPath();
+	crescer.arc(x,y,raio,0,2 * Math.PI);
+	crescer.stroke();
+};
+
+
+var y = 1;
+var desenha = function(){
+	circulo2(y,100,y/2);
+	y++;
+}
+
+
+setInterval(desenha, 30);
+</script>
+
+
+<script>
+
+	var tela = document.getElementById("img");//pegar pelo id do elemento
+	var img = tela.getContext("2d");
+	
+	var imagem = new Image();
+	imagem.src = "http://www.caelum.com.br/imagens/instrutores/fotos/paulo-silveira-90.jpg";
+
+	var desenhaImagem = function(x, y) {
+		img.drawImage(imagem, x, y)
+	};
+
+	var z = 1;
+	var desenha = function(){
+		desenhaImagem(z,100);
+		z++;
+	}
+
+
+setInterval(desenha, 30);
+</script>
